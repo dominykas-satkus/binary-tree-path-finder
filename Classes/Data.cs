@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
+    //  Class defined as static, since there is no instance specific data.
     public static class Data
     {
         private const string Values = "215 192 124 117 269 442 218 836 347 235 320 805 522 417 345 229 601 728 835 " +
@@ -12,6 +13,8 @@
                                       "197 197 131 171 522 137 217 224 291 413 528 520 227 229 928 223 626 034 683 " +
                                       "839 052 627 310 713 999 629 817 410 121 924 622 911 233 325 139 721 218 253 " +
                                       "223 107 233 230 124 233";
+
+        //  Property has only getter method that returns the node values as a list.
         public static List<int> NodeValues => Values.Split(' ').Select(int.Parse).ToList();
     }
 }
